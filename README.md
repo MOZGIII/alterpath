@@ -13,17 +13,17 @@ Alterpath allows you to manipulate the system `PATH` (environment variable) on W
 ## Usage
 
 	$ alterpath -h
-	Read the usage instructions shown
+	Read the usage instructions shown.
 
 	$ alterpath prepend "C:\test"
-	Prepending PATH with "C:\test"
+	Prepending PATH with "C:\test"!
 
 	$ alterpath list
 	C:\test
 	...
 
 	$ alterpath remove "C:\test"
-	Removing "C:\test" from PATH
+	Removing "C:\test" from PATH!
 
 
 ## Notes
