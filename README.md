@@ -28,7 +28,7 @@ Alterpath allows you to manipulate the system `PATH` (environment variable) on W
 
 ## Notes
 
-If the item you're adding is already in `PATH`, 
+If the item you're adding is already in `PATH`, it will not be added again by default, but you can use `-f` to force add it.
 
 ## Contributing
 
