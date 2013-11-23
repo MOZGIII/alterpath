@@ -59,10 +59,14 @@ module Alterpath
         @path ||= WinPathUtils::Path.new
       end
 
+      def get_addition_options(opts)
+        opts[:force] ? { duplication_filter: :none } : {}
+      end
+
       def append(opts, args)
         args.each do |arg|
           puts "Appending \"#{arg}\" to PATH!"
-          path.append(arg)
+          path.append(arg, get_addition_options(opts))
           exit
         end
       end
@@ -70,7 +74,7 @@ module Alterpath
       def prepend(opts, args)
         args.each do |arg|
           puts "Prepending PATH with \"#{arg}\"!"
-          path.prepend(arg)
+          path.prepend(arg, get_addition_options(opts))
           exit
         end
       end
