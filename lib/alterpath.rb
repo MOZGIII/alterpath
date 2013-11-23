@@ -1,0 +1,1 @@
+require "alterpath/version"
