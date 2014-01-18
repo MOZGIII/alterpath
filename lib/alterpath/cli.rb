@@ -67,6 +67,7 @@ module Alterpath
         args.each do |arg|
           puts "Appending \"#{arg}\" to PATH!"
           path.append(arg, get_addition_options(opts))
+          path.commit!
           exit
         end
       end
@@ -75,6 +76,7 @@ module Alterpath
         args.each do |arg|
           puts "Prepending PATH with \"#{arg}\"!"
           path.prepend(arg, get_addition_options(opts))
+          path.commit!
           exit
         end
       end
@@ -83,6 +85,7 @@ module Alterpath
         args.each do |arg|
           puts "Removing \"#{arg}\" from PATH!"
           path.remove(arg)
+          path.commit!
           exit
         end        
       end
